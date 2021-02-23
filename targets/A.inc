@@ -24,8 +24,11 @@
 ;
 ; Hardware definition file "A"
 ;
-; |               PORT 0               | |               PORT 1                |
-; | X | X | RC | X | MC | MB | MA | CC | | X | X | Cc | Cp | Bc | Bp | Ac | Ap |
+; |                PORT 0                 |
+; | X  | X  | RC | X  | MC | MB | MA | CC |
+;
+; |                PORT 1                 |
+; | X  | X  | Cc | Cp | Bc | Bp | Ac | Ap |
 ;
 ;**** **** **** **** ****
 
@@ -294,32 +297,5 @@ ENDM
 Stop_Adc MACRO
 ENDM
 
-Set_RPM_Out MACRO
-ENDM
-
-Clear_RPM_Out MACRO
-ENDM
-
-Set_LED_0 MACRO
-ENDM
-
-Clear_LED_0 MACRO
-ENDM
-
-Set_LED_1 MACRO
-ENDM
-
-Clear_LED_1 MACRO
-ENDM
-
-Set_LED_2 MACRO
-ENDM
-
-Clear_LED_2 MACRO
-ENDM
-
-Set_LED_3 MACRO
-ENDM
-
-Clear_LED_3 MACRO
-ENDM
+$include (./common/no_rpm.inc)		; Include no RPM macros
+$include (./common/no_led.inc)		; Include no LED macros
